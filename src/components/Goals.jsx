@@ -23,6 +23,11 @@ const Goals = () => {
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 
+  const deleteGoal = (e, indexToDelete) => {
+    e.stopPropagation();
+    setGoals(goals.filter((_, i) => i !== indexToDelete));
+  };
+
   return (
     <div className="form-container">
       <h2 className="form-title">Goals Manager</h2>
@@ -54,15 +59,21 @@ const Goals = () => {
         {goals.map((goal, index) => {
           const isExpanded = expandedIndex === index;
           return (
-            <div key={index} className={`goal-card ${isExpanded ? "expanded" : ""}`} onClick={() => toggleExpand(index)}>
+            <div
+              key={index}
+              className={`goal-card ${isExpanded ? "expanded" : ""}`}
+              onClick={() => toggleExpand(index)}
+            >
               <div className="goal-text">
                 <h3 title={goal.title}>{goal.title}</h3>
-                <p className={isExpanded ? "full-text" : "truncated-text"}>{goal.description}</p>
+                <p className={isExpanded ? "full-text" : "truncated-text"}>
+                  {goal.description}
+                </p>
               </div>
-              <button className="delete-btn" onClick={(e) => {
-                e.stopPropagation();
-                setGoals(goals.filter(i => i !== index));
-              }}>
+              <button
+                className="delete-btn"
+                onClick={(e) => deleteGoal(e, index)}
+              >
                 ✖
               </button>
             </div>
