@@ -5,7 +5,7 @@ print("Запуск долгоживущего процесса. Нажмите 
 counter = 0
 try:
     while True:
-        print(f"Процесс работает... Шаawdawfг {counter}")
+        print(f"Процесс работает... Шаг {counter}")
         counter += 1
         time.sleep(5) 
 except KeyboardInterrupt:
