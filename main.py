@@ -1,6 +1,6 @@
 import time
 
-print("Зaadawdwafdwaапуск долгоживущего процесса. Нажмите Ctrl+C для остановки.")
+print("Зaadawdadwadawaапуск долгоживущего процесса. Нажмите Ctrl+C для остановки.")
 
 counter = 0
 try:
