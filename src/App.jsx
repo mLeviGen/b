@@ -1,4 +1,4 @@
-import Goals from "./components/Goals"";
+import Goals from "./components/Goals";
 
 function App() {
   return <Goals />;
