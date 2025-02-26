@@ -7,6 +7,6 @@ try:
     while True:
         print(f"Процесс работает... Шаг {counter}")
         counter += 1
-        time.sleep(5)  # задержка в 5 секунд между выводами
+        time.sleep(5) 
 except KeyboardInterrupt:
     print("Процесс завершён пользователем.")
