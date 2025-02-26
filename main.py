@@ -1,9 +1,12 @@
 import time
 
-print("Запуск тестового процесса...")
+print("Запуск долгоживущего процесса. Нажмите Ctrl+C для остановки.")
 
-for i in range(5):
-    print(f"Сообщение {i+1}")
-    time.sleep(1)
-
-print("Тест завершён.")
+counter = 0
+try:
+    while True:
+        print(f"Процесс работает... Шаг {counter}")
+        counter += 1
+        time.sleep(5)  # задержка в 5 секунд между выводами
+except KeyboardInterrupt:
+    print("Процесс завершён пользователем.")
