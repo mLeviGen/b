@@ -1,11 +1,11 @@
 import time
 
-print("Зaапуск долгоживущего процесса. Нажмите Ctrl+C для остановки.")
+print("Зaadawdwafdwaапуск долгоживущего процесса. Нажмите Ctrl+C для остановки.")
 
 counter = 0
 try:
     while True:
-        print(f"Процесс работает... Шаг {counter}")
+        print(f"Процесс работает... Шаwwwг {counter}")
         counter += 1
         time.sleep(5) 
 except KeyboardInterrupt:
